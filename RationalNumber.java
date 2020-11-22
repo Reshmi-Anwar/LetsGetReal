@@ -30,7 +30,7 @@ public class RationalNumber extends RealNumber
   public RationalNumber reciprocal(){
     return new RationalNumber(denominator, numerator);
   }
-  
+
   public boolean equals(RationalNumber other){
     if (numerator == other.getNumerator() && denominator == other.getDenominator()){
       return true;
@@ -67,12 +67,9 @@ public class RationalNumber extends RealNumber
   private void reduce(){
 
   }
-  /******************Operations Return a new RationalNumber!!!!****************/
-  /**
-  *Return a new RationalNumber that is the product of this and the other
-  */
+
   public RationalNumber multiply(RationalNumber other){
-    return null;
+    return new RationalNumber(numerator * other.getNumerator(), denominator * other.getDenominator());
   }
 
   /**
