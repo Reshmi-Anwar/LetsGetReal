@@ -25,37 +25,19 @@ public class RealNumber{
     return false;
   }
 
-  /*
-  *Return a new RealNumber that has the value of:
-  *the sum of this and the other
-  */
   public RealNumber add(RealNumber other){
-     //other can be ANY RealNumber, including a RationalNumber
-     //or other subclasses of RealNumber (that aren't written yet)
-     return null;
+     return (new RealNumber(value + other.getValue()));
   }
 
-  /*
-  *Return a new RealNumber that has the value of:
-  *the product of this and the other
-  */
   public RealNumber multiply(RealNumber other){
-        return null;
+      return (new RealNumber(value * other.getValue()));
   }
 
-  /*
-  *Return a new RealNumber that has the value of:
-  *this divided by the other
-  */
   public RealNumber divide(RealNumber other){
-        return null;
+      return (new RealNumber(value / other.getValue()));
   }
 
-  /*
-  *Return a new RealNumber that has the value of:
-  *this minus the other
-  */
   public RealNumber subtract(RealNumber other){
-    return null;
+      return (new RealNumber(value - other.getValue()));
   }
 }
