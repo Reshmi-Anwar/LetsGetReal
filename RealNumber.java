@@ -14,12 +14,15 @@ public class RealNumber{
   }
   //---------ONLY EDIT BELOW THIS LINE------------
 
-  /*
-  *Return true when the values are within 0.001% of eachother.
-  *Special case: if one is exactly zero, the other must be exactly zero.
-  */
   public boolean equals(RealNumber other){
-    return true;
+    if (value == 0){
+      return (other.getValue() == 0);
+    }
+    double differenceValue = Math.abs(other.getValue() - value);
+    if (differenceValue == 0 || (differenceValue / value <= 0.00001 && differenceValue / other.getValue() <= 0.00001)){
+      return true;
+    }
+    return false;
   }
 
   /*
