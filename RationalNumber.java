@@ -34,8 +34,13 @@ public class RationalNumber extends Number
   }
 
   public boolean equals(RationalNumber other){
-    return numerator == other.getNumerator() && denominator == other.getDenominator();
+    //return numerator == other.getNumerator() && denominator == other.getDenominator();
+    //return ((numerator - other.getNumerator() <= (0.00001 * numerator)) && (denominator - other.getDenominator() <= (0.00001 * denominator)));
+    return ((numerator - other.getNumerator() <= (0.00001)) && (denominator - other.getDenominator() <= (0.00001)));
+
+
   }
+
 
   public String toString(){
     if (denominator == 1){
@@ -45,7 +50,6 @@ public class RationalNumber extends Number
       return "0";
     }
     return numerator + "/" + denominator;
-
   }
 
   public static int gcd(int a, int b){
@@ -53,9 +57,10 @@ public class RationalNumber extends Number
     int dividend = Math.max(a, b);
     int remainder = 1;
     int gcd = 1;
-    //if (divisor == 0){
-    //  divisor = 1;
-    //}
+    if (divisor == 0){
+      return 1;
+    }
+
 
     do {
       remainder = dividend % divisor;
@@ -69,8 +74,9 @@ public class RationalNumber extends Number
       }
     } while (remainder > 0);
     return gcd;
-
   }
+
+
 
   private void reduce(){
     int gcd = gcd(Math.abs(numerator), Math.abs(denominator));
