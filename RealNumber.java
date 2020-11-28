@@ -14,17 +14,7 @@ public class RealNumber extends Number{
   }
   //---------ONLY EDIT BELOW THIS LINE------------
 
-  /*public boolean equals(RealNumber other){
-    if (value == 0){
-      return (other.getValue() == 0);
-    }
-    double differenceValue = Math.abs(other.getValue() - value);
-    if (differenceValue == 0 || (differenceValue / value <= 0.00001 && differenceValue / other.getValue() <= 0.00001)){
-      return true;
-    }
-    return false;
-  }
-  */
+
 
   public RealNumber add(RealNumber other){
      return (new RealNumber(value + other.getValue()));
